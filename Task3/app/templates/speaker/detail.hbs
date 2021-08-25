@@ -1,0 +1,19 @@
+<h2 class="text-center">Информация о спикере</h2>
+<div class="col mb-4">
+  <div class="card">
+  <img src="images/speaker.jpg" width="250" height="250" class="rounded mx-auto d-block">
+  <div class="card-body">
+      <h5 class="card-title text-center">
+         {{model.lastName}} {{model.firstName}} {{model.patronymic}}
+      </h5>
+  </div>
+  <div class="card-footer">
+      <div class="text-center">
+        {{#link-to "speaker.index" class="btn btn-outline-primary"}}
+          Закрыть
+        {{/link-to}}
+      </div>
+  </div>
+  </div>
+</div>
+{{outlet}}

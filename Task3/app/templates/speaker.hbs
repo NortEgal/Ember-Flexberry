@@ -1,0 +1,67 @@
+{{outlet}}
+{{!-- <div class="panel-heading">
+  <div class="search">
+    {{input type="text" placeholder="Search by Author Name" value=search}}
+  </div>
+
+  {{#link-to "author.create" class="btn-new"}}
+    <div class="sr-only">Add new Author</div>
+  {{/link-to}}
+</div>
+
+<div class="panel-content">
+  <h3 class="panel-title">Authors</h3>
+
+  {{#if isLoading}}
+    <div class="welcome-page">
+      <img src="/loading.gif" alt="Welcome">
+    </div>
+  {{else}}
+  <ul class="collection">
+    {{#each model as |author|}}
+      {{author-item firstName=author.firstName lastName=author.lastName idAuthor=author.id tagName='li'}}
+    {{/each}}
+  </ul>
+  {{/if}}
+</div> --}}
+
+
+<div class="container h-100">
+		<div class="htop">
+			<h2 class="text-center">Спикеры</h2>
+			<div class="form-row navbar-panel justify-content-between">
+				<div class="col-md-auto">
+					{{!-- <button class="btn btn-outline-primary my-2" type="button" title="Добавить спикера">
+						<svg viewBox="0 0 16 16" class="bi bi-plus card-button" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+						</svg>
+					</button> --}}
+            {{#link-to "speaker.create" class="btn btn-outline-primary my-2" title="Добавить спикера"}}
+              <svg viewBox="0 0 16 16" class="bi bi-plus card-button" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+              </svg>
+            {{/link-to}}
+				</div>
+				<div class="col-md-auto">
+					<form class="form-inline">
+						{{!-- <input class="form-control mr-2 search-long search-only" type="search" placeholder="ФИО" aria-label="Спикер"> --}}
+            {{input type="text" placeholder="Поиск ФИО" value=search class="form-control mr-2 search-long search-only"}}
+						{{!-- <button class="btn btn-outline-primary my-2" type="submit">Найти</button> --}}
+					</form>
+				</div>
+			</div>
+			<div class="row row-cols-1 row-cols-md-3">
+
+      {{#if isLoading}}
+        <div class="welcome-page">
+          <img src="/loading.gif" alt="Welcome">
+        </div>
+      {{else}}
+        {{#each model as |speaker|}}
+          {{speaker-item speaker=speaker}}
+        {{/each}}
+      {{/if}}
+
+			</div>
+		</div>
+	</div>

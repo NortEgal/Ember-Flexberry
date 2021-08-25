@@ -1,0 +1,54 @@
+<form onsubmit={{action "submitForm"}} class="edit-form">
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Название:</label>
+    <div class="col-sm-10">
+      {{input type="text" value=name class="form-control form-control-lg"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Автор:</label>
+    <div class="col-sm-10">
+      {{input type="text" value=author class="form-control form-control-lg"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Кол-во страниц:</label>
+    <div class="col-sm-10">
+      {{input type="number" value=pages class="form-control form-control-lg" placeholder="123"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Ссылка на описание:</label>
+    <div class="col-sm-10">
+      {{input type="url" value=descURL class="form-control form-control-lg" placeholder="http://www.example.com"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Ссылка на обложку:</label>
+    <div class="col-sm-10">
+      {{input type="url" value=thumbnailURL class="form-control form-control-lg" placeholder="http://www.example.com"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Теги:</label>
+    <div class="col-sm-10">
+      {{input type="text" value=tags class="form-control form-control-lg" placeholder="Через запятую"}}
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6">
+      <button type="submit" class="btn btn-outline-primary btn-lg">Сохранить</button>
+    </div>
+    <div class="col-6 text-right">
+      {{#link-to "book.index" class="btn btn-outline-secondary btn-lg" }}Отмена{{/link-to}}
+    </div>
+	</div>
+
+</form>

@@ -1,0 +1,21 @@
+<form onsubmit={{action "submitForm"}}>
+  <div class="field">
+    <label>Имя: </label>
+    {{input type="text" value=firstName}}
+  </div>
+
+  <div class="field">
+    <label>Фамилия:</label>
+    {{input type="text" value=lastName}}
+  </div>
+
+  <div class="field">
+    <label>Отчество:</label>
+    {{input type="text" value=patronymic}}
+  </div>
+
+  <div class="form-footer">
+    {{#link-to "speaker" class="btn btn-outline-primary text-left"}}Вернуться{{/link-to}}
+    <button type="submit" class="btn-submit">Сохранить</button>
+  </div>
+</form>

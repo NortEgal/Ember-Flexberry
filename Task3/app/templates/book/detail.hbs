@@ -1,0 +1,29 @@
+<div class="col mb-4">
+  <div class="card">
+    <img src="{{model.thumbnailURL}}" width="250" height="250" class="rounded mx-auto d-block" alt="Фото спикера">
+  <div class="card-body">
+    <h3 class="card-title text-center">{{model.name}}</h3>
+    <h6 class="card-subtitle mb-2 text-left">
+      <p>Автор: {{model.author}}</p>
+      <p>Количество страниц: {{model.pages}}</p>
+      <p>Ссылка на описание: <a class="link" href="{{model.descURL}}">{{model.descURL}}</a></p>
+      <p>Ссылка на обложку: <a class="link" href="{{model.thumbnailURL}}">{{model.thumbnailURL}}</a></p>
+      <p>Теги: 
+            {{#each model.tags as |tag|}}
+                <a href="#" class="tag-link"><span>#{{tag}}</span></a>
+            {{/each}}
+      </p>
+    </h6>
+  </div>
+  <div class="card-footer">
+    {{!-- <div class="row"> --}}
+      <div class="text-center">
+        {{#link-to "book.index" class="btn btn-outline-primary"}}
+          Вернуться
+        {{/link-to}}
+      </div>
+    {{!-- </div> --}}
+  </div>
+  </div>
+</div>
+{{outlet}}
